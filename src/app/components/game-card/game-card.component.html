@@ -1,0 +1,16 @@
+<mat-card class="example-card h-100" *ngIf="game" >
+  <mat-card-header>
+
+    <mat-card-title>{{game.name}}</mat-card-title>
+
+  </mat-card-header>
+  <img mat-card-image [src]="game.background_image"  class="img-fluid">
+  <mat-card-content>
+    <p>Fecha de lanzamiento: {{game.released | date:'dd-MM-yyyy'}}</p>
+    <p>Puntuación: {{game.metacritic}}</p>
+
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button (click)="botonVer()">VER</button>
+  </mat-card-actions>
+</mat-card>

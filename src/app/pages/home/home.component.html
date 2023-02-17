@@ -1,0 +1,29 @@
+<div class="container-sm m-auto ">
+  <!-- Titulo-->
+  <div class="text-center mt-5">
+    <h1>Lista de videojuegos por plataforma</h1>
+  </div>
+  <hr>
+  <div >
+    <h2>Seleccione una plataforma</h2>
+  </div>
+
+  <!--Chips -->
+  <div>
+    <mat-chip-listbox >
+      <mat-chip-option *ngFor="let pepe of platforms" (click)="fetchGames(pepe.id)" >
+        {{pepe.name}}
+      </mat-chip-option>
+
+    </mat-chip-listbox>
+  </div>
+
+  <!-- Juegos -->
+  <div class="row py-3">
+    <app-game-card *ngFor="let game of games" [game]="game"
+                   class="col-3 mb-3" (alPresionarBotonVer)="verDetalle($event)">
+    </app-game-card>
+  </div>
+
+
+</div>

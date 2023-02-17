@@ -1,0 +1,12 @@
+
+<div *ngIf="game">
+  <h1 mat-dialog-title>{{game.name}}</h1>
+  <mat-dialog-content>
+    <img [src]="game.background_image" class="img-fluid">
+    <div [innerHTML]="game.description"></div>
+
+  </mat-dialog-content>
+  <mat-dialog-actions>
+    <button mat-button mat-dialog-close> Cerrar</button>
+  </mat-dialog-actions>
+</div>
